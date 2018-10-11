@@ -8,7 +8,7 @@
     "start": "server.cmd"
   },
   "keywords": [],
-  "author": "",
+  "author": "Max Golovanov",
   "license": "ISC",
   "dependencies": {
     "@babel/core": "^7.1.2",
