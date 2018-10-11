@@ -4,7 +4,7 @@
 
 import SwaggerExpress from 'swagger-express-mw';
 import SwaggerUi from 'swagger-tools/middleware/swagger-ui';
-
+import os from 'os';
 import express from 'express';
 import path from 'path';
 import util from 'util';
@@ -13,7 +13,7 @@ import _ from 'lodash';
 import { Card, CardDeck } from './Cards';
 
 let app = express();
-let hostname = ("http://" + process.env.HOST + ":"); // "http://127.0.0.1:";
+let hostname = ("http://" + os.hostname() + ":"); // "http://127.0.0.1:";
 let port = process.env.PORT || 10010;
 
 console.log(`Starting server ${hostname}${port} ...`);
