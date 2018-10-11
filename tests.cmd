@@ -1,9 +1,6 @@
 set NODE_OPTIONS=--experimental-modules --no-warnings
 set NODE_PATH=%CD%;%NODE_PATH%
 set PATH=%PATH%;%CD%\node_modules\.bin
-REM node --experimental-modules ./index.mjs
-REM mocha -r esm
-REM node ./index.mjs
 jest --coverage
 robocopy coverage www /E
 
