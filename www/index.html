@@ -1,0 +1,57 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Card Deck shuffler</title>
+  <meta name="description" content="Card deck shuffling game">
+  <meta name="author" content="Max Golovanov">
+  <link href="styles.css" type="text/css" rel="stylesheet" />
+  <link href="style2.css" type="text/css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="js/jquery.balloon.js"></script>
+  <script src="js/main.js"></script>
+</head>
+<body onload="onLoadComplete()">
+  <ul class="panel boxshadow">
+    <li><a href="#" id='btn_swagger' title="Swagger" onclick="nav(this.id);return false;"><i class="material-icons">settings</i>Swagger</a></li>
+    <li><a href="#" id='btn_tests'   title="Tests"   onclick="nav(this.id);return false;"><i class="material-icons">build</i>Tests</a></li>
+  </ul>
+  <div class="panel boxshadow" >
+      <h1>Usage Instructions</h1>
+      <hr/>
+      <p>
+      * Toggle <b>Reveal cards</b> to show the cards. That would also enable dragging / copying between the two decks.<br/>
+      * When the cards are face-up / revealed, you can drag-n-drop or copy-paste one or many cards bewteen the <b>Table</b> (top) and the <b>Drawer</b> (bottom).
+        You can copy-paste the card glyphs using clipboard.<br/>
+      * Each card is encoded with an alphabet letter in range of <b>[A..Z, a..z]</b>. Guess the letter code for the 🂡 Ace of Spades! ♠<br/>
+      * Type alphabet letters in <b>Table Deck ID</b> field to customize your deck.<br/>
+      * Click on a card to select <b>🂠</b>, then <b>Cut</b> to push all cards before this card to the back of the deck<br/>
+      * Click <b>Shuffle</b> to invoke the server crypto-random API to shuffle the top 'Desk' deck (bottom 'Drawer remains intact).<br/>
+      * Click <b>Pop</b> to move the card from the top desk to the bottom drawer and reveal the card.<br/>
+      <br/>
+      <br/>
+      All UI buttons invoke the card server API to operate the current user's deck.
+      You can click on <b>Swagger</b> and <b>Tests</b> buttons above to see how this app is built.<br/>
+      </p>
+      <hr/>
+  <form>
+    <p><label for="table_layout_id">Table Deck ID:</label><input type="text" id="table_layout_id" class="long" /></p>
+    <ul>
+    <li><input type="button" value="Reset" onclick="resetTable()" class="btn"/></li>
+    <li><input type="button" value="Shuffle" onclick="shuffle()" class="btn"/></li>
+    <li><input type="button" value="Cut" onclick="cut()" class="btn"/></li>
+    <li><input type="button" value="Pop" onclick="pop()" class="btn"/></li>
+    <li><input type="checkbox" id="showCards" onclick="onDeckVisibilityChanged()" /><label for="showCards">Reveal cards</label></li>
+    </ul>
+    <div id="table_deck" contenteditable="true" class="carddesk"></div>
+    <p><label for="drawer_layout_id">Drawer Deck ID:</label><input type="text" id="drawer_layout_id" class="long" /></p>
+    <ul>
+    <li><input type="button" value="Clear" onclick="clearDrawer()" class="btn" /></li>
+    <li><input type="button" value="Move up" onclick="moveToTable()" class="btn" /></li>
+    </ul>
+    <div id="drawer_deck" contenteditable="true" class="carddesk"></div>
+  </form>
+  </div>
+</body>
+</html>

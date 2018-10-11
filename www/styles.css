@@ -1,0 +1,274 @@
+body {
+    background-color: #bbbbbb;
+}
+
+h1 {
+	font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+	font-size: 24px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 26.4px;
+}
+
+h3 {
+	font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+	font-size: 14px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 15.4px;
+}
+
+p {
+	font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+	font-size: 14px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+	line-height: 20px;
+}
+
+blockquote {
+	font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+	font-size: 21px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+	line-height: 30px;
+}
+
+pre {
+	font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+	font-size: 13px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+	line-height: 18.5714px;
+}
+
+table, td
+{
+    border-color: #CCCCCC;
+    border-style: solid;
+}
+
+table
+{
+    border-width: 0 0 1px 1px;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+td
+{
+    margin: 0;
+    padding: 4px;
+    border-width: 1px 1px 0 0;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 5px;
+    overflow: hidden;
+    background-color: #f1f1f1;
+}
+
+li {
+    font-family: "Segoe UI", "Droid Sans", sans-serif;
+    float: left;
+}
+
+label {
+    font-family: "Segoe UI", "Droid Sans", sans-serif;
+    display:inline-block;
+    *display: inline;     /* for IE7*/
+    zoom:1;              /* for IE7*/
+    float: left;
+    padding-top: 5px;
+    text-align: right;
+    width: 140px;
+    font-weight: bold;
+}
+
+input {
+    font-family: "Segoe UI", "Droid Sans", sans-serif;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display:inline-block;
+    *display: inline;     /* for IE7*/
+    zoom:1;              /* for IE7*/
+    vertical-align:middle;
+    margin-left:20px;
+    background-color: white;
+}
+
+li a {
+    display: block;
+    color: #000;
+    text-align: center;
+    display: table-cell;
+    vertical-align:middle; 
+    padding: 10px 10px;
+    text-decoration: none;
+    width: 24px;
+    height: 16px;
+}
+
+li i {
+    display: block;
+    color: #000;
+    text-align: center;
+    display: table-cell;
+    vertical-align:middle; 
+    padding: 10px 10px;
+    text-decoration: none;
+    height: 16px;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+    background-color: #AABBCC;
+    color: white;
+    cursor: pointer;
+    height: 16px;
+}
+
+b {
+    text-shadow: 2px 2px #CCCCCC;
+    color: #000030;
+}
+
+li i:hover {
+    background-color: #AABBCC;
+    color: blue;
+    cursor: pointer;
+    text-shadow: 1px 1px #FFFFFF;
+    opacity: 1;
+    height: 16px;
+}
+
+canvas {
+    border-style: inset;
+}
+
+#btn_close_dialog {
+    background-color: #ccbbbb;
+    margin-right: 16px;
+    position: absolute;
+    right: 0;
+    z-index: 10;
+}
+
+li#btn_close_dialog i:hover, li#btn_close_dialog a:hover {
+    background-color: #ef0000;
+    color: white;
+    text-shadow: 1px 1px #000000;
+}
+
+/* This text is in monospace */
+.mono {
+    font-family: monospace;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.top-right {
+    color: black;
+    width: 24px;
+    height: 24px;
+    border: 1px outset;
+
+    right: 0;
+    position: relative;
+
+    float: right;
+}
+
+.top-right :hover{
+    background-color: #EEEEEE;
+    cursor: pointer;
+    border: 2px outset;
+    outline:none;
+}
+
+.carddesk {
+  border-style: inset;
+  border-width: 2px;
+  font-size: 600%;
+  background-image: url(img/wood.jpg);
+  background-repeat: repeat;
+  padding: 3px;
+  margin: 3px;
+}
+
+.card {
+  display: inline;
+  background-color:#EFEFEF;
+  padding: 0px;
+  margin: 2px;
+  border-style: outset;
+  text-shadow: 1px 0px #EFEFEF;
+}
+
+.hint {
+    font-family: "Segoe UI", "Droid Sans", sans-serif;
+	font-style: normal;
+    font-variant: normal;
+    background-color: white;
+    border-style: none;
+    border-color: #000000;
+    padding: 5pt;
+}
+
+.panel {
+    background-color: white;
+    border-style: none;
+    margin: 1%;
+    padding: 1%;
+}
+
+.long {
+    border: 1px;
+    border-color: #CCCCCC;
+    width: 50%;
+    padding: 2px 2px;
+    margin: 4px 0;
+    box-shadow: inset 2 0 3px #CCCCCC;
+    background-color: #FFFFFF;
+}
+
+.grabbable {
+    cursor: move; /* fallback if grab cursor is unsupported */
+    cursor: grab;
+    cursor: -moz-grab;
+    cursor: -webkit-grab;
+}
+
+ /* (Optional) Apply a "closed-hand" cursor during drag operation. */
+.grabbable:active { 
+    cursor: grabbing;
+    cursor: -moz-grabbing;
+    cursor: -webkit-grabbing;
+}
+
+::selection {
+    background: #cccccc; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+    background: #cccccc; /* Gecko Browsers */
+}
+
+.btn {
+    width: 96px;
+    font-family: "Segoe UI", "Droid Sans", sans-serif;
+    float: left;
+}
+
+.boxshadow {
+    position: relative;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+    padding: 10px;
+    background: white;
+}

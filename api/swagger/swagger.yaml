@@ -1,0 +1,58 @@
+swagger: '2.0'
+info:
+  version: 1.0.0
+  title: Card Deck Service
+#host: 'localhost:10010'
+basePath: /
+schemes:
+  - http
+  - https
+consumes:
+  - application/json
+produces:
+  - application/json
+paths:
+  /dealer:
+    x-swagger-router-controller: carddealer
+    get:
+      description: Returns Card Decks to the caller
+      operationId: carddeck
+      parameters:
+        - in: query
+          name: id
+          description: Deck ID (hashcode)
+          type: string
+        - in: query
+          name: op
+          description: Deck operation
+          type: integer
+          format: int32
+        - in: query
+          name: pos
+          description: Position or Pop-count
+          type: integer
+          format: int32
+      responses:
+        '200':
+          description: Success
+          schema:
+            $ref: '#/definitions/DeckResponse'
+        default:
+          description: Error
+          schema:
+            $ref: '#/definitions/ErrorResponse'
+  /swagger:
+    x-swagger-pipe: swagger_raw
+definitions:
+  DeckResponse:
+    required:
+      - message
+    properties:
+      message:
+        type: string
+  ErrorResponse:
+    required:
+      - message
+    properties:
+      message:
+        type: string

@@ -1,0 +1,3 @@
+import * as assert from 'assert';
+import * as _      from 'lodash';
+import * as tests2 from './api/controllers/carddealer';

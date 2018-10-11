@@ -1,0 +1,11 @@
+.tiles { margin: 50px auto; padding: 10px; }
+
+.tiles:hover { }
+
+.tile {
+	float: left; width: 70px; margin: 5px; text-align: center; overflow: hidden;
+}
+
+.large  { padding: 5px 0; font-size: 300%; }
+.medium { padding: 5px 0; font-size: 100%; }
+.small  { padding: 5px 0; font-size: 50%;  }
